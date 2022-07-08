@@ -388,11 +388,9 @@ width: 50%;
 @media (max-width:505px) {
   
 
-  .home-btn{
-    width: 500px;
+  .home-btns{
+    width: 250px;
     display: flex;
     flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
   }
 }
