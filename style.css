@@ -159,6 +159,7 @@ header nav .menu a:hover::after{
 }
 .menu-btn{
   display: none;
+  z-index: var(--z-tooltip);
 }
 
 /* sticly navbar styling*/
