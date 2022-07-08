@@ -1,0 +1,398 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Mono:ital,wght@0,400;0,700;1,500&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Poppins:wght@400;500;600&family=Roboto+Mono:ital,wght@0,400;0,700;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Poppins:wght@400;500;600&family=Roboto+Mono:ital,wght@0,400;0,700;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@400;500;600;700&family=Oxygen:wght@700&family=Poppins:wght@400;500;600&family=Roboto+Mono:ital,wght@0,400;0,700;1,500&display=swap');
+
+/*======================================== all similar style classes ============================================*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Oxygen', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Comfortaa', cursive;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.home,.about,.skills,.contact, footer{
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  font-family: 'Oxygen', sans-serif;
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Comfortaa', cursive;
+}
+
+
+  /*===== Colores =====*/
+  :root{
+    --first-color:   #fece00;
+    --second-color: #0E2431;
+    --font-white:#fff;
+    --font-black:#111;
+    --font-grey:lightgray;
+  }
+  
+  /*===== Font size =====*/
+  :root{
+    --extra-large-font-size:6rem;
+    --large-font-size:4rem;
+    --big-font-size: 2rem;
+    --medium-font-size: 1.25rem;
+    --small-font-size:1.1rem;
+    --normal-font-size: 0.938rem;
+  }
+
+  /*===== Margenes and padding =====*/
+  :root{
+    --mp-0:0;
+    --mp-1: 0.5rem;
+    --mp-2: 1rem;
+    --mp-3: 1.5rem;
+    --mp-4: 2rem;
+    --mp-5: 2.5rem;
+    --mp-6: 3rem;
+  }
+  
+  /*===== z index =====*/
+  :root{
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  /*===== BASE =====*/
+  *,::before,::after{
+    box-sizing: border-box;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  body{
+    /* margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font); */
+    font-size: var(--normal-font-size);
+    /* color: var(--second-color); */
+    
+  }
+section{
+padding: 100px 0px;
+}
+
+/*=================================== header and navbar section styling==========================================*/
+header{
+    /* background-color: var(--first-color); */
+    position: fixed;
+    width: 100%;
+   
+    }
+
+header nav{
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+    padding: var(--mp-3) 0;
+  
+
+}
+header nav .logo a{
+    color: var(--font-black);
+    font-size: var(--big-font-size);
+    font-weight: 900;
+}
+header nav .logo span{
+    color: var(--font-white);
+ 
+}
+header nav .menu li{
+
+  font-weight: 900;
+    display:inline-block;
+    padding:0 var(--mp-2);
+  
+}
+
+header nav .menu a{
+  color: var(--font-black);
+  font-size: var(--small-font-size);
+    /* color: var(--font-black); */
+    transition: all 0.3s ease;
+    position: relative;
+}
+header nav .menu a:hover{
+    color: var(--font-white);
+    
+}
+
+header nav .menu a::after{
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    content: '';
+    height: 2px;
+    width: 0;
+    background: var(--font-black);
+    transition: all 0.3s ease;
+}
+header nav .menu a:hover::after{
+  width: 100%;
+}
+.menu-btn{
+  display: none;
+}
+
+/* sticly navbar styling*/
+    
+.sticky{
+  background-color: var(--font-black); 
+}
+.nav-font-color{
+  color: var(--font-white) !important;
+
+}
+.logo-font-color{
+  color: var(--first-color) !important;
+}
+/*=================================== home section styling======================================================*/
+
+.home{
+  background-color: #fece00;
+  height: 100vh;
+  min-height: 500px;
+  border: 2px solid black;
+}
+
+.home .home-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ /* flex-wrap: wrap; */
+}
+
+.home .home-content .column{
+width: 50%;
+}
+.home  .home-content .left .text-1{
+ font-size: var(--big-font-size);
+ margin-top: var(--mp-3);
+ color: var(--font-white);
+}
+.home .left .text-2{
+  padding: var(--mp-1) 0;
+  font-size: var(--large-font-size);
+  font-weight: 900;
+}
+.home .left .text-3{
+  font-size: var(--big-font-size);
+  font-weight: 600;
+  margin-bottom:var(--mp-5);
+}
+.home .left .typing{
+  color: var(--font-white);
+}
+
+
+.btn{
+
+  background: none;
+   padding: 14px 30px;
+   border:2px solid var(--font-black) ;
+   border-radius: 5px;
+   transition: 0.5s;
+   color: var(--font-black);
+   transition: 0.5s;
+}
+.cv-btn{
+  color: var(--first-color);
+  background:var(--font-black);
+  box-shadow:inset 2px 2px var(--first-color), inset -2px -2px var(--first-color);
+}
+.cv-btn:hover{
+  background: none;
+  color: var(--font-black);
+}
+.hire-btn:hover
+{
+   
+   color: var(--first-color);
+   background:var(--font-black);
+   /* border-color: var(--font-white); */
+   box-shadow:inset 2px 2px var(--first-color), inset -2px -2px var(--first-color);
+   
+}
+
+.home .right img{
+  /* position: absolute; */
+  /* bottom: 30px;
+  right: 30px;
+   width: 235px; */
+  max-width: 90%;
+  z-index:var(--z-back)
+}
+/*======================================= about section style classes ============================================*/
+
+/*======================================== Skills section style classe===========================================*/
+
+
+
+
+/*========================================Contact section style classes ==========================================*/
+
+
+/*========================================footer section style classes ==========================================*/
+
+
+
+
+
+/*--------------------------------------------media queryies========================================= */
+
+@media (max-width:1080px){
+  .home .right img{
+     /* position: absolute;
+     bottom: 30px;
+    right: 30px; */
+    max-width: 80%;
+  }
+
+}
+
+@media (max-width:850px){
+
+  /*===== Font size =====*/
+  :root{
+    --extra-large-font-size:4rem;
+    --large-font-size:3rem;
+    --big-font-size: 1.5rem;
+    --medium-font-size: 1.25rem;
+    --small-font-size:1rem;
+    --normal-font-size: 0.938rem;
+  }
+
+}
+
+@media (max-width:768px){
+  .home .home-content{
+    align-items: flex-start;
+  }
+.home .max-width,header .max-width{
+  padding: 0 30px;
+}
+
+/*===== Font size =====*/
+:root{
+  --extra-large-font-size:3.5rem;
+  --large-font-size:2.5rem;
+  --big-font-size: 1.3rem;
+  --medium-font-size: 1.2rem;
+  --small-font-size:1rem;
+  --normal-font-size: 0.738rem;
+}
+  header nav .menu{
+    position: absolute;
+    left:-100%;
+    top: 76px;
+    background-color: var(--font-black);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: all 0.5s ease;
+  }
+ 
+  header nav .menu li{
+       font-weight: 900;
+      display:block;
+      padding:var(--mp-4) 0;
+    
+  }
+  
+  header nav .menu a{
+    color: var(--font-white);
+    font-size: var(--big-font-size);
+      /* color: var(--font-black); */
+      transition: all 0.3s ease;
+      position: relative;
+  }
+  header nav .menu a:hover{
+    color: var(--first-color);
+  }
+  .menu-btn i.active:before{
+    content: "\f00d";
+}
+
+  .menu-btn{
+    display: block;
+    color: var(--font-white);
+    font-size: var(--big-font-size);
+  }
+  
+  nav .menu.active{
+    left: 0;
+}
+/*home section styling*/
+
+.home .home-content{
+ flex-direction: column-reverse;
+}
+
+.home .right img{
+  /* position: absolute;
+  bottom: 30px;
+ right: 30px; */
+ width: 400px;
+ max-width: 60%;
+ display: block;
+ margin:auto;
+ align-self: center;
+}
+.btn{
+  padding: 10px 20px;
+  position: relative;
+}
+
+.home  .home-content .left .text-1{
+  font-size: var(--small-font-size);
+  margin-top: var(--mp-3);
+ }
+ .home .left .text-2{
+   padding: var(--mp-1) 0;
+   font-size: var(--large-font-size);
+ }
+ .home .left .text-3{
+     font-size: var(--big-font-size);
+   font-weight: 600;
+   margin-bottom:var(--mp-3);
+ }
+}
+
+@media (max-width:505px) {
+  
+
+  .home-btn{
+    width: 500px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
