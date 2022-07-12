@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Mono:ital,wght@0,400;0,700;1,500&display=swap'); */
 
@@ -14,11 +14,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Roboto Mono', monospace;
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Roboto Mono', monospace;
     font-family: 'Oxygen', sans-serif;
-    font-family: 'Bebas Neue', cursive;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Bebas Neue', cursive;*/
+    font-family: 'Comfortaa', cursive; 
     list-style: none;
     text-decoration: none;
 }
@@ -33,11 +33,11 @@ section{
     margin: auto;
 }
 .home,.about,.skills,.contact, footer{
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Roboto Mono', monospace;
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'Roboto Mono', monospace;
   font-family: 'Oxygen', sans-serif;
-  font-family: 'Bebas Neue', cursive;
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Bebas Neue', cursive;*/
+  font-family: 'Comfortaa', cursive; 
 }
 
 
@@ -96,7 +96,40 @@ section{
 section{
 padding: 100px 0px;
 }
+section .title{
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
 
+}
+section .title::before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 150px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+  z-index: -21;
+}
+section .title::after{
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: var(--small-font-size);
+  color: var(--first-color);
+  padding: 0 5px;
+  background: #fff;
+  transform: translateX(-50%);
+  content:"";
+  white-space: nowrap;
+  z-index: var(--z-back);
+}
+ 
 /*=================================== header and navbar section styling==========================================*/
 header{
     /* background-color: var(--first-color); */
@@ -180,17 +213,17 @@ header nav .menu a:hover::after{
   background-color: #fece00;
   height: 100vh;
   min-height: 700px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
-.home .home-content{
+.home .home-content,.about .about-content{
   display: flex;
   align-items: center;
   justify-content: space-between;
  /* flex-wrap: wrap; */
 }
 
-.home .home-content .column{
+.home .home-content .column,.about .about-content .column{
 width: 50%;
 }
 .home  .home-content .left .text-1{
@@ -268,10 +301,43 @@ width: 50%;
 
 
 /*======================================= about section style classes ============================================*/
+.about .title::after{
+content:"who i am";
+}
+
+.about-content .left img{
+  width: 100%;
+  height: 500px;
+  object-fit: initial;
+  padding-left: 10px;
+}
+
+.about-content .right {
+padding: 0 var(--mp-5);
+}
+.about-content .right h1{
+ padding: var(--mp-2) 0;
+}
+
+.about-content .right h1 span{
+color: var(--first-color);
+}
+.about-content .right p{
+text-align: justify;
+}
+.about-content .right .about-btn{
+  margin-top: var(--mp-6);
+}
+
+.about-content .right .about-btn a{
+  padding: 15px 50px;
+}
 
 /*======================================== Skills section style classe===========================================*/
 
-
+.skills .title::after{
+  content:"What i know"
+}
 
 
 /*========================================Contact section style classes ==========================================*/
@@ -289,7 +355,9 @@ width: 50%;
   .home .right img{
       margin-left: 40px;
   }
-
+.about .max-width{
+  padding: 0 70px;
+}
 }
 
 
@@ -309,6 +377,11 @@ width: 50%;
 }
 
 @media (max-width:786px){
+
+  .home{
+       min-height: 800px;
+     }
+
   .home .max-width,header .max-width{
     padding: 0 70px;
   }
@@ -399,14 +472,63 @@ width: 50%;
    font-weight: 600;
    margin-bottom:var(--mp-3);
  }
+
+
+/* abuout section styling */
+.about .about-content{
+  flex-direction: column;
+}
+.about .about-content .column{
+  width: 100%;
+}
+
+.about-content .right {
+  padding:0 10px;
+  }
 }
 
 
-
-@media (max-width:410px) {
+@media (max-width:490px) {
   
-  .home .max-width,header .max-width{
+  .home{
+    min-height: 750px;
+  }
+  .about .max-width{
     padding: 0 50px;
   }
+  section{
+    padding: 70px 0;
+  }
+  
+.about-content .right {
+  padding:0;
+  }
+
+  .about-content .left img{
+  image-resolution:from-image 300dpi;
+  
+  }
+  
+
+   }
+   
+@media (max-width:410px) {
+  
+  .home{
+    min-height: 700px;
+  }
+  .home .max-width,header .max-width,.about .max-width{
+    padding: 0 50px;
+  }
+   }
+   
+
+   
+@media (max-width:350px) {
+  
+  .home .max-width,header .max-width,.about .max-width{
+    padding: 0 30px;
+  }
+
    }
    
