@@ -454,9 +454,18 @@ transition: 2s stroke-dashoffset;
    color: #555;
 }
 /* /image column */
+.skills-content .right .back-color{
+  background-color: var(--first-color);
+  border-radius: 5px;
+}
+
+.skills-content .right{
+  margin: 30px;
+}
 .skills-content .right img{
   width: 100%;
-  margin-left: 60px;
+  
+  /* margin-left: 60px; */
 }
 
 
