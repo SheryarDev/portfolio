@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Mono:ital,wght@0,400;0,700;1,500&display=swap'); */
-
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Poppins:wght@400;500;600&family=Roboto+Mono:ital,wght@0,400;0,700;1,500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Mono:ital,wght@0,400;0,700;1,500&display=swap'); 
 
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Poppins:wght@400;500;600&family=Roboto+Mono:ital,wght@0,400;0,700;1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Poppins:wght@400;500;600&family=Roboto+Mono:ital,wght@0,400;0,700;1,500&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@400;500;600;700&family=Oxygen:wght@700&family=Poppins:wght@400;500;600&family=Roboto+Mono:ital,wght@0,400;0,700;1,500&display=swap');
 
@@ -523,7 +523,7 @@ padding: var(--mp-1) var(--mp-1);
 border-radius: 5px;
 cursor: pointer;
 opacity: 0;
-transition: all 0.4s ease;
+transition: all 0.3s ease-in-out;
 }
 
 .portfolio .portfolio-content .port-card:hover::after{
@@ -629,10 +629,77 @@ content: 'get in touch';
 
 /*========================================footer section style classes ==========================================*/
 
+footer{
+  background: #111;
+  height: auto;
+  width: 100%;
+  padding-top: 40px;
+  color: var(--font-white);
+}
 
 
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
 
+.footer-content h3{
+  font-size: var(--big-font-size);
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
 
+.footer-content p{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: var(--normal-font-size);
+}
+.socials{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--mp-1) 0 var(--mp-6) 0;
+}
+
+.socials li{
+  margin: 0 var(--mp-2);
+}
+.socials a{
+  color: var(--font-white);
+}
+.socials a i{
+   font-family: 'Comfortaa', cursive;  ;
+  font-size: var(--big-font-size);
+  color: var(--font-white);
+}
+
+.socials a:hover i{
+  color: var(--first-color);
+}
+.footer-bottom{
+  background: var(--first-color);
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-bottom p{
+  font-size: var(--normal-font-size);
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.footer-bottom span{
+  /* text-transform: uppercase; */
+color: var(--font-black);
+  font-weight: 700;
+  font-family: 'Comfortaa', cursive; 
+  font-size: var(--normal-font-size);
+}
 /*--------------------------------------------media queryies========================================= */
 
 @media (max-width:1080px){
@@ -821,6 +888,21 @@ width:200%;
   width: 100%;
   margin-bottom: 35px;
 }
+
+/*footer section */
+.footer-content p{
+  max-width: 400px;
+  margin: 10px auto;
+  line-height: 25px;
+  font-size: 1.2rem;
+  
+}
+.footer-bottom P{
+  font-size: 1.2rem;
+}
+.footer-bottom span{
+    display: none;
+  }
 }
 
 
@@ -856,6 +938,15 @@ width:200%;
     grid-gap: 1rem;
   }
   
+  footer .footer-content{
+    padding: 0px 40px;
+  }
+  footer .footer-bottom{
+    padding: 30px 40px;
+  }
+  footer .footer-bottom p{
+    font-size: 1rem;
+  }
   
    }
    
