@@ -216,14 +216,14 @@ header nav .menu a:hover::after{
   /* border: 2px solid black; */
 }
 
-.home .home-content,.about .about-content,.skills-content{
+.home .home-content,.about .about-content,.skills-content,.contact .contact-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
  /* flex-wrap: wrap; */
 }
 
-.home .home-content .column,.about .about-content .column,.skills-content .column{
+.home .home-content .column,.about .about-content .column,.skills-content .column,.contact-content .column{
 width: 50%;
 }
 .home  .home-content .left .text-1{
@@ -468,10 +468,164 @@ transition: 2s stroke-dashoffset;
   /* margin-left: 60px; */
 }
 
+/*========================================Portfolio section style classes ==========================================*/
+
+.portfolio .title::after{
+content: "what i have done";
+}
+.portfolio .title::before{
+  width: 200px;
+}
+
+.portfolio .portfolio-content{
+  display: grid;
+  grid-template-columns: repeat(3,minmax(200px,1fr));
+  grid-template-rows: repeat(auto,1fr);
+  grid-gap: 2rem;
+}
+.portfolio .portfolio-content .port-card{
+  box-shadow: 4px -5px 28px -1px rgba(0, 0, 0, .15),
+  -6px -6px 10px -1px rgba(255, 255,255,0.7);
+  border-radius: 8px;
+  /* height: 300px; */
+  transition: all 0.3s ease;
+  position: relative;
+  
+}
+
+.portfolio .portfolio-content .port-card::before{
+  position: absolute;
+  /* background: black; */
+  height: 0;
+  width:100%;
+  content: '';
+  top: 0;
+  left: 0;
+  opacity:0.8;
+  transition: all 0.3s ease;
+}
+
+.portfolio .portfolio-content .port-card:hover::before{
+  background:var(--first-color);
+  height: 100%;
+}
+.portfolio .portfolio-content .port-card::after{
+position: absolute;
+bottom: 30px;
+left: 30px;
+font-weight: 700;
+font-size: var(--normal-font-size);
+content: 'Read More';
+background: transparent;
+border: 2px solid black;
+/* color:var(--font-white); */
+padding: var(--mp-1) var(--mp-1);
+border-radius: 5px;
+cursor: pointer;
+opacity: 0;
+transition: all 0.4s ease;
+}
+
+.portfolio .portfolio-content .port-card:hover::after{
+opacity: 1;
+}
 
 
+
+
+.portfolio .portfolio-content .port-card .image img{
+  width: 100%;
+  height: 200px;
+}
+.portfolio .portfolio-content .port-card .port-text{
+  padding: 20px;
+  text-align: center;
+}
+.portfolio .portfolio-content .port-card .port-text h3{
+padding-bottom: 5px;
+}
 /*========================================Contact section style classes ==========================================*/
 
+.contact .title::after{
+content: 'get in touch';
+}
+.contact .title::before{
+  width: 250px;
+}
+.contact .contact-content .column{
+  width: calc(50% - 30px);
+}
+.contact .contact-content .con-text{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+  text-align: justify;
+}
+.contact .contact-content .left .icons{
+  margin: 10px 0;
+}
+.contact .contact-content .row{
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+.contact .contact-content .row .info{
+  margin-left: 30px;
+}
+.contact .contact-content .row i{
+  font-size: 25px;
+  color: var(--first-color);
+}
+.contact .contact-content .info .head{
+  font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+  color: #333;
+}
+.contact .right form .fields{
+  display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.contact .right form .textarea{
+  height: 80px;
+  width: 100%;
+}
+.contact .right form .name{
+  margin-right: 10px;
+}
+.contact .right form .email{
+  margin-left: 10px;  
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus{
+  border-color: #b3b3b3;
+}
+.contact .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button{
+  height: 47px;
+  width: 170px;
+}
 
 /*========================================footer section style classes ==========================================*/
 
@@ -517,6 +671,11 @@ transition: 2s stroke-dashoffset;
     grid-column-gap: 0.8rem;
           
    }
+   .portfolio .portfolio-content{
+  
+    grid-template-columns: repeat(3,minmax(190px,1fr));
+    grid-gap: 1.5rem;
+  }
 }
 
 @media (max-width:786px){
@@ -648,6 +807,20 @@ width:200%;
    padding-top: 4px;
 }
 
+/* protfolio section */
+.portfolio .portfolio-content{
+  grid-template-columns: repeat(2,minmax(160px,1fr));
+  grid-gap: 1rem;
+}
+
+/*contact section */
+.contact .contact-content{
+  flex-direction: column;
+}
+.contact .contact-content .column{
+  width: 100%;
+  margin-bottom: 35px;
+}
 }
 
 
@@ -656,7 +829,7 @@ width:200%;
   .home{
     min-height: 750px;
   }
-  .about .max-width{
+  .about .max-width,.portfolio .max-width{
     padding: 0 50px;
   }
   section{
@@ -678,6 +851,11 @@ width:200%;
   padding: 0 10px;
      
   }
+  .portfolio .portfolio-content{
+    grid-template-columns: repeat(2,minmax(140px,1fr));
+    grid-gap: 1rem;
+  }
+  
   
    }
    
@@ -686,9 +864,15 @@ width:200%;
   .home{
     min-height: 700px;
   }
-  .home .max-width,header .max-width,.about .max-width{
+  .home .max-width,header .max-width,.about .max-width,.contact .max-width{
     padding: 0 50px;
   }
+
+  .portfolio .portfolio-content{
+    grid-template-columns: repeat(1,minmax(140px,1fr));
+    grid-gap: 1.2rem;
+  }
+  
 
    
    }
@@ -698,7 +882,7 @@ width:200%;
    
 @media (max-width:350px) {
   
-  .home .max-width,header .max-width,.about .max-width,.skill .max-width{
+  .home .max-width,header .max-width,.about .max-width,.skill .max-width,.portfolio.max-width.contact .max-width{
     padding: 0 30px;
   }
 
