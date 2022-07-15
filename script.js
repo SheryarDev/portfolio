@@ -15,7 +15,6 @@ $(document).ready(function(){
     });
 
 
-
 });
 
        // toggle menu/navbar script
@@ -24,9 +23,13 @@ $(document).ready(function(){
         $('.menu-btn i').toggleClass("active");
     });
 
+
 // sills circular bar
+const skill=document.getElementById('skills');
+console.log(skill)
     const card = document.querySelectorAll('.card');
-window.addEventListener('load', function(){
+ window.addEventListener('load', function(){
+   console.log('scroll')
   card.forEach(item => {
     let numElement = item.querySelector('.number');
     let num = parseInt(numElement.innerText);
@@ -41,9 +44,39 @@ window.addEventListener('load', function(){
         numElement.innerText = count + "%";
       }
     }, time)
-    circle.style.strokeDashoffset 
-      = 235 - ( 235 * ( num / 100 ));
+    circle.style.strokeDashoffset = 235 - ( 235 * ( num / 100 ));
    
     
   })
 });
+
+
+
+// $(window).scroll(function(){
+//   const card = document.querySelectorAll('.card');
+//   console.log('scroll')
+//   if(this.scrollY > 1688){
+//  card.forEach(item => {
+//    let numElement = item.querySelector('.number');
+//    let num = parseInt(numElement.innerText);
+//    let count = 0;
+//    let time = 2000 / num;
+//    let circle = item.querySelector('.circle');
+//    setInterval(() => {
+//      if(count == num){
+//        clearInterval();
+//      } else {
+//        count += 1;
+//        numElement.innerText = count + "%";
+//      }
+//    }, time)
+//    circle.style.strokeDashoffset = 235 - ( 235 * ( num / 100 ));
+  
+   
+//  })
+// }else{
+//  console.log("not working")
+// }
+// });
+     
+  
