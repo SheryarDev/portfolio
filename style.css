@@ -710,7 +710,14 @@ footer {
     --small-font-size: 1.05rem;
     --normal-font-size: 0.738rem;
   }
-
+  .home .max-width,
+  header .max-width,
+  .about .max-width,
+  .skill .max-width,
+  .portfolio .max-width,
+  .contact .max-width {
+    padding: 0 50px;
+  }
   header nav {
     padding: 1.2rem 0;
   }
@@ -739,6 +746,7 @@ footer {
   }
   .menu .menu-btn i {
     padding: 0 5px;
+    display:inline-block;
     font-size: 30px;
     color: var(--first-color);
   }
@@ -952,8 +960,10 @@ footer {
   .home .max-width,
   header .max-width,
   .about .max-width,
+  .skill .max-width,
+  .portfolio .max-width,
   .contact .max-width {
-    padding: 0 50px;
+    padding: 0 30px;
   }
 
   .portfolio .portfolio-content {
@@ -967,7 +977,7 @@ footer {
   header .max-width,
   .about .max-width,
   .skill .max-width,
-  .portfolio.max-width.contact .max-width {
+  .portfolio .max-width,.contact .max-width {
     padding: 0 15px;
   }
 
