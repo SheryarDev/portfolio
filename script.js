@@ -11,7 +11,7 @@ $(document).ready(function(){
             $('li > a').removeClass("nav-font-color");
             $('.logo > a').removeClass("logo-font-color");
         }
-        
+
     });
 
 
@@ -26,19 +26,19 @@ $(document).ready(function(){
 
         // typing text animation script
         var typed = new Typed(".typing", {
-          strings: ["Developer", "Designer", "Freelancer"],
+          strings: ["Web Developer"],
           typeSpeed: 100,
           backSpeed: 60,
           loop: true
       });
-  
+
       var typed = new Typed(".typing-2", {
-          strings: ["Developer","Designer", "Freelancer"],
+          strings:["Software Engineer ", "Mern Stack Developer"],
           typeSpeed: 100,
           backSpeed: 60,
           loop: true
       });
-  
+
 
 // sills circular bar
 const skill=document.getElementById('skills');
@@ -57,12 +57,12 @@ console.log(skill)
         clearInterval();
       } else {
         count += 1;
-        numElement.innerText = count + "%";
+        numElement.innerText = count + "";
       }
     }, time)
     circle.style.strokeDashoffset = 235 - ( 235 * ( num / 100 ));
-   
-    
+
+
   })
 });
 
@@ -87,12 +87,12 @@ console.log(skill)
 //      }
 //    }, time)
 //    circle.style.strokeDashoffset = 235 - ( 235 * ( num / 100 ));
-  
-   
+
+
 //  })
 // }else{
 //  console.log("not working")
 // }
 // });
-     
-  
+
+

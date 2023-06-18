@@ -220,6 +220,12 @@ display: none;
   min-height: 700px;
 }
 
+/* .home .home-content .left  {
+width: 50%;
+}
+.home .home-content .right  {
+  width: 50%;
+  } */
 .home .home-content .left .text-1 {
   font-size: var(--big-font-size);
   margin-top: var(--mp-3);
